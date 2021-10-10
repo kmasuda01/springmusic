@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS chord_table;
+
+CREATE TABLE chord_table
+(
+   id INT NOT NULL AUTO_INCREMENT,
+   chord VARCHAR(70) NOT NULL,
+   PRIMARY KEY(id)
+);

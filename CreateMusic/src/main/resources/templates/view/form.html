@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Music Chord</title>
+</head>
+<body>
+    <h2>入力フォーム</h2>
+    <form method="post" action="#" th:action="@{/view/form}" th:object="${chordForm}">
+        <label for="chord">コード</label>
+        <input type="text" id="chord" name="chord" th:value="${chordForm.chord}"><br>
+        <input type="submit" value="送信">
+    </form>
+    <div><a href="#" th:href="@{/view}">トップページ</a></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.container{
+    position: sticky;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11em;
+    text-align: center;
+}
+.header_inner{
+    padding: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+}
+.nav_list{
+    padding:0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.nav_item{
+    margin: 0 40px;
+}
+.nav_char{
+    text-decoration:none; 
+    color: #BEBEBE;
+}
+a:hover{
+    /* aタグのhoverクラスカーソル合わせると色変わる */
+    color:black;
+}
+
+
+p{
+    display: inline-block;
+}
+span{
+    margin-right: 10px;
+}
+.containerbody{
+    height: 100%;
+    width: 900px;
+    margin: auto;
+}
+.searchchord{
+    height: 150px;
+}
+.showmychord{
+    height: auto;
+}
+.result{
+    background-color: aliceblue;
+}
+.footer{
+    padding: 30px;
+    background-color: #BDC0BA;
+}
+.footercon{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+}

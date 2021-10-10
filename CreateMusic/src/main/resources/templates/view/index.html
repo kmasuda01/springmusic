@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Music Chord</title>
+    <link th:href="@{/css/content.css}" rel="stylesheet">
+    <script th:src="@{/js/script.js}"></script> 
+</head>
+<body>
+	<div class="body">
+		<div class="container">
+			<div class="header">
+				<div class="header_inner">
+                    <p>My MUSIC CHORD</p>
+                </div>
+			</div>
+			<nav class="nav">
+                <div class="nav_inner">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a class="nav_char" href="#search">コード検索</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_char" href="#create">コード作成</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_char" href="#showmy">コード表示</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="containerbody">	
+            	<div class="searchchord" id="search">
+            		<h2>コード検索</h2>
+            		<select class="select "id="select">
+            			<option value="">-</option>
+            			<option value="C">C</option>
+            			<option value="D">D</option>
+            			<option value="E">E</option>
+            			<option value="F">F</option>
+            		</select>
+            		<div class="showchord" id="showchord"></div>
+            	</div>
+            	<div class="createchord" id="create">
+            		<h2>コード作成</h2>
+            		<a href="#" th:href="@{/view/form}">コードを追加する</a>
+            	</div>
+            	<div class="showmychord" id="showmy">
+            		<h2>コード表示</h2>
+	            	<table width="600">
+	        			<tr><th>小節</th><th>コード</th>
+	        			<!-th:each は for eachと同じ　ControllerからmodelとしてtestListを受け取る> 
+	       				<tr th:each="chord : ${chordList}">
+	            			<td align="center" th:text="${chord.id}"></td>
+	            			<td align="center" th:text="${chord.chord}"></td>
+	           				<td>
+	                			<a href="#" th:href="@{'/view/edit/' + ${chord.id}}"><button>編集</button></a>
+	            			</td>
+	            			<td>
+	               	 			<form action="#" th:action="@{'/view/delete/' + ${chord.id}}" method="post">
+	                    		<button>削除</button>
+	                		</form>
+	            			</td>
+	        			</tr>
+	    			</table>
+            	</div>
+            </div>
+            <footer class="footer"> 
+        		<div class="footercon">@kosuke masuda</div>
+    		</footer>
+		</div>
+	</div>
+    
+</body>
+</html>
