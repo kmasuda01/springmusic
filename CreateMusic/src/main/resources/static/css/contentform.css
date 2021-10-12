@@ -1,0 +1,39 @@
+.container{
+    position: sticky;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11em;
+    text-align: center;
+}
+.header_inner{
+    padding: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
+
+p{
+    display: inline-block;
+}
+span{
+    margin-right: 10px;
+}
+.containerbody{
+    height: 100%;
+    width: 900px;
+    margin: auto;
+}
+.inputform{
+    height: 400px;
+}
+.footer{
+    padding: 30px;
+    background-color: #BDC0BA;
+}
+.footercon{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+}

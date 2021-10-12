@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/view")
 //リクエストマッピング（RequestMapping）には、クライアントから受け付けたリクエスト URL 及び HTTP メソッドによって、
-//Controller 内のどのメソッドに処理を渡すかを決める役割があります。
+//Controller 内のどのメソッドに処理を渡すかを決める役割がある。
 public class MusicController {
 	private JdbcTemplate jdbcTemplate;
 	//@Autowired
@@ -29,8 +29,8 @@ public class MusicController {
 	//一覧画面表示
 	//@RequestMapping(method=RequestMethod.GET)と同じ
 	@GetMapping
-	//Modelオブジェクトに追加される時の属性名はデフォルトで、クラス名の先頭を小文字にした値になります。
-	//Modelオブジェクトとは、Springが用意するMapオブジェクトで、Viewに渡すオブジェクトを設定します。
+	//Modelオブジェクトに追加される時の属性名はデフォルトで、クラス名の先頭を小文字にした値になる。
+	//Modelオブジェクトとは、Springが用意するMapオブジェクトで、Viewに渡すオブジェクトを設定する。
 	public String index(Model model) {
 		String sql = "SELECT * FROM chord_table";
 		//List 要素数が決まっていない配列宣言方法　配列は要素数が決まっている
@@ -62,7 +62,7 @@ public class MusicController {
 	//編集フォームの表示
 	@GetMapping("/edit/{id}")
 	//URLマッピングで指定するURLに「{」と「}」で囲まれた部分がパラメータ名になり、
-	//@PathVariableアノテーションのvalue属性にパラメータ名を指定することで、URLの部分文字列を取得することができます。
+	//@PathVariableアノテーションのvalue属性にパラメータ名を指定することで、URLの部分文字列を取得することができる。
 	public String edit(Model model, Form chordForm, @PathVariable int id) {
 		String sql = "SELECT * FROM chord_table WHERE id = " + id;
 		Map<String, Object> map = jdbcTemplate.queryForMap(sql);
