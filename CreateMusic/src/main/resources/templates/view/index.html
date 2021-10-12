@@ -51,7 +51,7 @@
 	        			<tr><th>小節</th><th>コード</th>
 	        			<!-th:each は for eachと同じ　ControllerからmodelとしてtestListを受け取る> 
 	       				<tr th:each="chord : ${chordList}">
-	            			<td align="center" th:text="${chord.id}"></td>
+	            			<td align="center" id="barcount" th:text="${chordStat.count}"></td>
 	            			<td align="center" th:text="${chord.chord}"></td>
 	           				<td>
 	                			<a href="#" th:href="@{'/view/edit/' + ${chord.id}}"><button>編集</button></a>
